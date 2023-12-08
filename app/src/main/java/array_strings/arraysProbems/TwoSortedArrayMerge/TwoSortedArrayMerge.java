@@ -1,5 +1,8 @@
 package array_strings.arraysProbems.TwoSortedArrayMerge;
 
+/**
+ *  Given two sorted integer arrays arr1 and arr2, return a new array that combines both of them and is also sorted.
+ */
 public class TwoSortedArrayMerge {
 
     public static void main(String[] args) {

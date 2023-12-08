@@ -1,4 +1,4 @@
-package array_strings.arraysProbems;
+package array_strings.arraysProbems.Palindrom;
 
 public class PalindromCheck {
     

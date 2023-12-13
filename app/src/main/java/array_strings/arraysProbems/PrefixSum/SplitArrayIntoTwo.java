@@ -8,6 +8,7 @@ public class SplitArrayIntoTwo {
         int array [] = {10,4,-8,7};
 
         System.out.println(waysToSplitArray(array));
+        System.out.println(waysToSplitArraySec(array));
     }
 
 
@@ -22,11 +23,6 @@ public class SplitArrayIntoTwo {
             prefix[i] = prefix[i - 1] + nums[i];
         }
 
-        System.out.print("[");
-        for (int i : prefix) {
-            System.out.print(i + " ");
-        }
-        System.out.print("]");
 
         int count = 0;
         for (int i = 0; i < prefix.length - 1; i++) {
@@ -36,7 +32,28 @@ public class SplitArrayIntoTwo {
             }
         }
 
-        System.out.println();
+        return count;
+    }
+
+    public static int waysToSplitArraySec(int[] nums) {
+        
+        int sum = 0;
+
+        for(int i = 0; i < nums.length; i++){
+            sum += nums[i];
+        }
+
+        int count = 0;
+        int leftSum = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            
+            leftSum += nums[i];
+
+            if(leftSum >= (sum - leftSum)){
+                count++;
+            }
+        }
+
         return count;
     }
 }
